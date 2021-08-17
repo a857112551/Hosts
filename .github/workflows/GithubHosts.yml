@@ -64,7 +64,7 @@ jobs:
 
     # 传送hosts文件到私人服务器；解决gitee违规问题；
     - name: put hosts to private
-      uses: root/SFTP-Deploy-Action@v1.0
+      uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
         username: 'GithubHosts'
         server: '67.209.180.196'
