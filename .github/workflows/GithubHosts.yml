@@ -50,27 +50,27 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
 
-    # 同步代码到gitee；
-    - name: Mirror the GithubHosts repos to Gitee
-      uses: Yikun/hub-mirror-action@master
-      with:
-        src: github/JohyC
-        dst: gitee/yuchi-shentang
-        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-        dst_token: ${{ secrets.GITEE_TOKEN }}
-        account_type: user
-        force_update: true
-        static_list: GithubHosts
+#     # 同步代码到gitee；
+#     - name: Mirror the GithubHosts repos to Gitee
+#       uses: Yikun/hub-mirror-action@master
+#       with:
+#         src: github/JohyC
+#         dst: gitee/yuchi-shentang
+#         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+#         dst_token: ${{ secrets.GITEE_TOKEN }}
+#         account_type: user
+#         force_update: true
+#         static_list: GithubHosts
 
     # 传送hosts文件到私人服务器；解决gitee违规问题；
     - name: put hosts to private
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
         username: 'GithubHosts'
-        server: 'suni.cf'
+        server: '67.209.180.196'
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
         local_path: './*.txt'
-        remote_path: '/upload'
+        remote_path: '/www/wwwroot/zhuye/share/Hosts'
         args: '-o ConnectTimeout=15'
         
     # 删除无用 workflow runs;
