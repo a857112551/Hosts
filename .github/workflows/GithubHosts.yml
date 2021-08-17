@@ -62,7 +62,7 @@ jobs:
 #         force_update: true
 #         static_list: GithubHosts
 
-    # 传送hosts文件到私人服务器；
+    # 传送hosts文件到私人服务器； 
     - name: put hosts to private
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
