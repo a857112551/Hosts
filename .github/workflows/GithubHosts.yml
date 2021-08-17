@@ -64,10 +64,11 @@ jobs:
 
     # 传送hosts文件到私人服务器；解决gitee违规问题；
     - name: put hosts to private
-      uses: wlixcc/SFTP-Deploy-Action@v1.0
+      uses: root/SFTP-Deploy-Action@v1.0
       with:
         username: 'GithubHosts'
         server: '67.209.180.196'
+        port: '28015'
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
         local_path: './*.txt'
         remote_path: '/www/wwwroot/zhuye/share/Hosts'
