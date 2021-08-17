@@ -37,7 +37,7 @@ jobs:
       id: commit
       run: |
         git config --global user.email 857112551@qq.com
-        git config --global user.name action_bot
+        git config --global user.name a857112551
         git add .
         git commit -m "update hosts"
       continue-on-error: true
