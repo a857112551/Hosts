@@ -8,7 +8,7 @@ on:
     branches:    
       - main
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 6 * * *'
   issues:
     types: [opened]
 
@@ -66,12 +66,12 @@ jobs:
     - name: put hosts to private
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
-        username: 'root'
-        server: '67.209.180.196'
+        username: ${{ secrets.USERNAME }} 
+        server: ${{ secrets.UPTARGET }} 
         port: '28015'
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
         local_path: './*.txt'
-        remote_path: '/www/wwwroot/zhuye/share/Hosts'
+        remote_path: ${{ secrets.UPPATH }} 
         args: '-o ConnectTimeout=15'
         
     # 删除无用 workflow runs;
