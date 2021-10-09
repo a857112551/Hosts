@@ -36,8 +36,8 @@ jobs:
     - name: commit
       id: commit
       run: |
-        git config --global user.email 857112551@qq.com
-        git config --global user.name a857112551
+        git config --global user.email ${{ secrets.GITEMAIL }}
+        git config --global user.name ${{ secrets.GITNAME }}
         git add .
         git commit -m "update hosts"
       continue-on-error: true
