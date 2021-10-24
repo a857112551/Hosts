@@ -72,8 +72,8 @@ jobs:
     - name: put hosts to private
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
-        username: 'github'
-        server: 'suni.cf'
+        username: ${{secrets.SSH_PRIVATE_USERNAME}}
+        server: ${{secrets.SSH_PRIVATE_SERVER}}
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
         local_path: './*.txt'
         remote_path: '/rw'
