@@ -75,6 +75,7 @@ jobs:
         username: ${{secrets.SSH_PRIVATE_USERNAME}}
         server: ${{secrets.SSH_PRIVATE_SERVER}}
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
+        port: 220
         local_path: './*.txt'
         remote_path: '/rw'
         args: '-o ConnectTimeout=15'
