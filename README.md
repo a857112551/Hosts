@@ -41,9 +41,10 @@ python引入rich库，使用脚本前需 pip install -r requirements；
 
 ### hosts本仓库在线同步地址
 
-1. Github https://github.com/JohyC/Hosts/blob/main/hosts.txt
+1. Github   https://github.com/JohyC/Hosts/blob/main/hosts.txt
 2. Gitee    https://gitee.com/yuchi-shentang/GithubHosts/blob/main/hosts.txt
-3. 私人服务器 
+3. Gitea    https://www.suni.cf:3000/Johy/Hosts/raw/branch/main/hosts.txt
+4. 服务器 
    - hosts:        		 https://www.suni.cf:8880/Hosts/hosts.txt 
    - GithubHosts:        https://www.suni.cf:8880/Hosts/GithubHosts.txt
    - EpicHosts:          https://www.suni.cf:8880/Hosts/EpicHosts.txt
@@ -61,7 +62,7 @@ python引入rich库，使用脚本前需 pip install -r requirements；
 2. 规则配置：
    - 方案名：Johy/hosts (自行命名)
    - 类型：远程
-   - URL 地址：https://www.suni.cf:8880/Hosts/hosts.txt (url: 推荐用服务器地址，国内同步更稳定)
+   - URL 地址：https://www.suni.cf:3000/Johy/Hosts/raw/branch/main/hosts.txt (url: 推荐地址，国内同步更稳定)
    - 自动更新：24小时 （hosts地址变更不会特别频繁）
 
 ![image](https://user-images.githubusercontent.com/38210128/127502984-7ef25b7c-1901-4164-ab29-e5dbc487e63d.png)
@@ -111,5 +112,6 @@ ipconfig /flushdns
 - [x] GitHub Actions自动更新hosts内容；
 - [x] GitHub Actions自动更新本仓库代码至[Gitee](https://gitee.com/yuchi-shentang/GithubHosts)；(可从Gitee获取最新hosts文件)
 - [x] Github actions自动同步hosts文件至私人服务器地址；[hosts](https://www.suni.cf:8880/Hosts/hosts.txt)；(解决Gitee hosts.txt文件违规问题)
+- [x] 自建git服务器，并同步仓库内容;(解决Gitee hosts.txt文件违规问题)
 
 
