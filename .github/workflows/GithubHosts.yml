@@ -38,7 +38,11 @@ jobs:
         if [ -f requirements ]; then pip install -r requirements; fi
         
     - name: update hosts
+<<<<<<< HEAD
       run: cd workingDir && sh runAllShellScript.sh
+=======
+      run: sh shell/runAllShellScript.sh
+>>>>>>> c41b5f3aab65af7b1ca67632602c46ac1d747fb2
     - name: commit
       id: commit
       run: |
