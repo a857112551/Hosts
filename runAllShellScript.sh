@@ -1,4 +1,5 @@
 #!/bin/bash!bash
-for f in *.sh; do
-  bash "$f"
+for Script in shell/*.sh;
+  do
+    bash "$Script";
 done
