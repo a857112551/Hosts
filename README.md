@@ -7,11 +7,6 @@
    - 添加 epic无法登录和领取免费游戏 hosts。
    - 第一次写python，练手学习.....
 
-2. 原理：
-
-   - python从域名解析出对应ip地址列；
-   - 编辑hosts后GitHub域名直接映射到 ip 地址，从中间环节杜绝dns污染；
-
 ## 脚本介绍
 
 ### python依赖
@@ -48,7 +43,9 @@ python引入rich库，使用脚本前需 pip install -r requirements；
 
 4. ~~服务器~~  由于安全问题，不再提供服务链接，请使用gitea链接同步；
    
-   
+### 仓库同步地址
+1. gitea https://www.suni.cf:3000/Johy/Hosts
+2. gitee https://gitee.com/yuchi-shentang/GithubHosts
 
 ## 使用方式
 
